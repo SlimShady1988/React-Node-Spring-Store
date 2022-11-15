@@ -13,6 +13,7 @@ const Auth = observer(() => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const isLogin = window.location.pathname === LOGIN_ROUTE;
+    const isRegistration = window.location.pathname === REGISTRATION_ROUTE;
     const navigate = useNavigate();
 
 

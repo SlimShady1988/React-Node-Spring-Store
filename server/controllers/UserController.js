@@ -49,9 +49,7 @@ class UserController{
 
     async check(req, resp) {
         const token = generateJwt(req.user.id, req.user.email, req.user.role)
-
         resp.json({token});
-
     }
 }
 

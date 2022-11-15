@@ -24,7 +24,10 @@ const CreateDeviceModal  = observer(({show, onHide}) => {
         setInfo(info.map(i => i.number === number ? {...i, [key]: value} : i));
     };
 
-    const selectFile = e => setFile(e.target.files[0]);
+    const selectFile = e => {
+        console.log(e.target)
+        setFile(e.target.files[0])
+    };
 
     const addDevice = () => {
         const formData = new FormData();
@@ -85,8 +88,9 @@ const CreateDeviceModal  = observer(({show, onHide}) => {
                     <Form.Control
                         onChange={selectFile}
                         className={"mt-3"}
-                        placeholder="Device name"
-                        type="file"/>
+                        placeholder="Device image"
+                        type="file"
+                        accept="image/*"/>
                     <hr/>
                     <Button onClick={addInfo} variant={"outline-success"}>Add Description</Button>
                     {info.map(i =>

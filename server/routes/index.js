@@ -14,11 +14,4 @@ router.use("/device", deviceRouter);
 
 
 
-
-
-
-
-
-
-
 module.exports = router;

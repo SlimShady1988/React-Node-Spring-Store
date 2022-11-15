@@ -10,11 +10,13 @@ const DevicePage = () => {
     useEffect(() => {
         fetchOneDevice(id).then(data => setDevice(data))
     }, [])
-
+    const path = process.env.REACT_APP_API_URL.endsWith("8080/")
+        ? process.env.REACT_APP_API_URL + "api/"
+        : process.env.REACT_APP_API_URL;
     return(
         <Container className="mt3">
             <Row>
-                <Col md={4}><Image width={300} height={300} src={process.env.REACT_APP_API_URL + device.img}/></Col>
+                <Col md={4}><Image width={300} height={300} src={path + device.img}/></Col>
                 <Col md={4}>
                     <div className="d-flex flex-column align-items-center">
                         <h2>{device.name}</h2>
