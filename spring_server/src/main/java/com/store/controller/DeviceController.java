@@ -1,28 +1,22 @@
 package com.store.controller;
 
 import com.store.entity.Brand;
-import com.store.entity.DeviceInfo;
 import com.store.entity.Type;
 import com.store.excaptions.DeviceAlreadyExistException;
 import com.store.excaptions.DeviceNotFoundException;
-import com.store.excaptions.ResponseMessage;
 import com.store.model.DeviceDTO;
 import com.store.services.DeviceService;
-import com.store.services.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 @RestController

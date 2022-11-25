@@ -6,7 +6,6 @@ import com.store.excaptions.TypesNotFoundException;
 import com.store.model.TypeDTO;
 import com.store.services.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +30,6 @@ public class TypeController {
         }
     }
 
-
     @PostMapping("/create")
     public ResponseEntity<String> create(@RequestBody Type type) {
         try {
@@ -43,16 +41,4 @@ public class TypeController {
             return ResponseEntity.badRequest().body("Error");
         }
     }
-
-//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<TypeDTO> getType(@RequestParam Type type) throws TypesNotFoundException {
-//        try {
-//            return ResponseEntity.ok().body(typeService.getType(type));
-//        } catch (TypesNotFoundException e) {
-//            throw new TypesNotFoundException(e.getMessage());
-//        }
-//    }
-
-
-
 }

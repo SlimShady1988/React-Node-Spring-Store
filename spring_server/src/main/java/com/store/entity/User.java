@@ -1,8 +1,8 @@
 package com.store.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.store.model.Role;
+import com.store.model.Status;
 import lombok.*;
-import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.util.*;
@@ -10,10 +10,14 @@ import java.util.*;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
+    public User () {
+        this.status = Status.ACTIVE;
+        this.role = Role.USER;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -25,8 +29,13 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Enumerated(value = EnumType.STRING)
     @Column(name = "role", nullable = false)
-    private String role;
+    private Role role;
+
+    @Enumerated(value = EnumType.STRING)
+    @Column(name = "status", nullable = false)
+    private Status status;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.PERSIST)
     @ToString.Exclude
@@ -39,7 +48,5 @@ public class User {
     public void setBasket(Basket basket) {
         basket.setUser(this);
         this.basket = basket;
-
-
     }
 }

@@ -64,7 +64,4 @@ public class Device {
         deviceInfo.forEach(info -> info.setDeviceId(this));
         this.info = deviceInfo;
     }
-
-
-
 }

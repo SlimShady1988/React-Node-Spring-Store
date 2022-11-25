@@ -42,14 +42,4 @@ public class BrandController {
             return ResponseEntity.badRequest().body("Error");
         }
     }
-
-//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<BrandDTO> getBrand(@RequestParam Brand brand) throws BrandsNotFoundException {
-//        try {
-//            return ResponseEntity.ok().body(brandService.getBrand(brand));
-//        } catch (BrandsNotFoundException e) {
-//            throw new BrandsNotFoundException(e.getMessage());
-//        }
-//    }
-
 }

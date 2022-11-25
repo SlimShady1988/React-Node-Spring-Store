@@ -1,13 +1,10 @@
 package com.store.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Getter
@@ -31,5 +28,4 @@ public class Type {
     @OneToMany(mappedBy = "type", cascade = CascadeType.PERSIST)
     @ToString.Exclude
     private List<TypeBrand> typeBrands = new ArrayList<>();
-
 }

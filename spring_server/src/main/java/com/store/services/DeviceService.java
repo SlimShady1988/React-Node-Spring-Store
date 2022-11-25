@@ -22,7 +22,7 @@ public class DeviceService {
     @Autowired
     private DeviceRepository deviceRepository;
     @Autowired
-    private StorageService storageService;
+    private FilesStorageService storageService;
 
     public Map<String, Object> getDevices(Map<String, Object> params) throws DeviceNotFoundException {
         Brand brand = (Brand)params.get("brand");

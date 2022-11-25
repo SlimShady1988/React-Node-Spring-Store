@@ -3,9 +3,7 @@ package com.store.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 @Getter
 @Setter
 @ToString
@@ -29,6 +27,5 @@ public class Basket {
 
     public void setUser(User user) {
         this.user = user;
-        user.setBasket(this);
     }
 }

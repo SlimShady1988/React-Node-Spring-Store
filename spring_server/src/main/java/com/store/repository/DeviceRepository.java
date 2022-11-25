@@ -4,7 +4,6 @@ import com.store.entity.Brand;
 import com.store.entity.Device;
 import com.store.entity.Type;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

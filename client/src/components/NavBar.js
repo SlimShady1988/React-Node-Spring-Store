@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Context} from "../index";
 import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
-import {ADMIN_ROUTE, REGISTRATION_ROUTE, LOGIN_ROUTE,SHOP_ROUTE} from "../utils/consts";
+import {ADMIN_ROUTE, LOGOUT_ROUTE, REGISTRATION_ROUTE, LOGIN_ROUTE,SHOP_ROUTE} from "../utils/consts";
 import {observer} from "mobx-react-lite";
 import {useNavigate} from 'react-router-dom'
 
@@ -13,7 +13,11 @@ const NavBar = observer(() => {
     const logout = () => {
         user.setUser({})
         user.setIsAuth(false)
-        navigate(SHOP_ROUTE)
+        if (process.env.REACT_APP_API_URL.endsWith("8080/")){
+            navigate(LOGOUT_ROUTE)
+        } else {
+            navigate(SHOP_ROUTE)
+        }
     }
 
     return (
