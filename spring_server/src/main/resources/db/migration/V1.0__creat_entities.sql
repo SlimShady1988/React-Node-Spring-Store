@@ -7,23 +7,7 @@ CREATE TABLE IF NOT EXISTS users
     created_at TIMESTAMP with time zone DEFAULT now(),
     updated_at TIMESTAMP with time zone DEFAULT now()
 );
---
 
--- CREATE TABLE roles
--- (
---     id   BIGSERIAL PRIMARY KEY NOT NULL,
---     name TEXT                  NOT NULL UNIQUE
--- );
---
-
--- CREATE TABLE user_roles
--- (
---     user_id   BIGSERIAL  NOT NULL,
---     role_id   BIGSERIAL  NOT NULL,
---     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE RESTRICT,
---     FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE ON UPDATE RESTRICT
--- );
---
 
 CREATE TABLE types
 (

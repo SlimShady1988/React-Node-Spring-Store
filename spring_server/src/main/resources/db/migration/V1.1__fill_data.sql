@@ -1,5 +1,3 @@
--- INSERT INTO roles(name) VALUES ('USER');
--- INSERT INTO roles(name) VALUES ('ADMIN');
 -- pass - aa
 INSERT INTO users (email, password)
 VALUES ('aa', '$2a$12$CQVERqfWtk7lrVw9AlEwEuhLoTEszE8LaWPxw8dAPpzODPrjrGw9W');
@@ -73,20 +71,12 @@ INSERT INTO baskets (user_id) VALUES (1);
 INSERT INTO baskets (user_id) VALUES (2);
 INSERT INTO baskets (user_id) VALUES (3);
 --
--- INSERT INTO basket_devices (device_id) VALUES (4);
--- INSERT INTO basket_devices (device_id) VALUES (3);
--- INSERT INTO basket_devices (device_id) VALUES (2);
--- INSERT INTO basket_devices (device_id) VALUES (1);
 --
 INSERT INTO ratings (user_id, device_id, rate) VALUES (1, 1, 5);
 INSERT INTO ratings (user_id, device_id, rate) VALUES (2, 3, 5);
 INSERT INTO ratings (user_id, device_id, rate) VALUES (3, 5, 4);
 -- --
 INSERT INTO device_infos (device_id, title, description) VALUES (1,'camera', '48px');
--- INSERT INTO device_infos (device_id, title, description) VALUES (2,'camera', '108px');
--- INSERT INTO device_infos (device_id, title, description) VALUES (3,'camera', '64px');
--- INSERT INTO device_infos (device_id, title, description) VALUES (4,'memory', '2 GB');
--- INSERT INTO device_infos (device_id, title, description) VALUES (5,'memory', '1 GB');
 INSERT INTO device_infos (device_id, title, description) VALUES (6,'memory', '1 GB');
 -- --
 -- --
